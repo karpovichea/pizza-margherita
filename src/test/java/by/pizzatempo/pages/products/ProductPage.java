@@ -20,11 +20,12 @@ public abstract class ProductPage {
         PageFactory.initElements(driver, this);
     }
 
-    protected WebElement findProductByName(List<WebElement> products, String name) {
+    protected void findProductByName(List<WebElement> products, String name) {
         wait.until(ExpectedConditions.visibilityOfAllElements(products));
         for (WebElement product : products) {
             if (product.getText().contains(name)) {
-                return selectedProduct = product;
+                selectedProduct = product;
+                return;
             }
         }
         throw new NoSuchElementException("Продукт с заданным названием не найден");
