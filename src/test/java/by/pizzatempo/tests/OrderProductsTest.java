@@ -1,6 +1,8 @@
 package by.pizzatempo.tests;
 
 import by.pizzatempo.pages.*;
+import by.pizzatempo.pages.products.DrinkPage;
+import by.pizzatempo.pages.products.PizzaPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

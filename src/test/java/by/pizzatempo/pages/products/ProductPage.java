@@ -1,4 +1,4 @@
-package by.pizzatempo.pages;
+package by.pizzatempo.pages.products;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
