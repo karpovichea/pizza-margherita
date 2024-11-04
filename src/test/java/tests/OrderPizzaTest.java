@@ -1,9 +1,8 @@
 package tests;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import pages.BasketPage;
 import pages.MainPage;
 import pages.OrderPopUp;
@@ -16,7 +15,7 @@ public class OrderPizzaTest extends BaseTest {
     private OrderPopUp orderPopUp;
     private BasketPage basketPage;
 
-    @BeforeEach
+    @BeforeMethod
     void setUpOderPizzaTests() {
         mainPage = new MainPage(driver);
         pizzaPage = new PizzaPage(driver);
@@ -24,8 +23,7 @@ public class OrderPizzaTest extends BaseTest {
         basketPage = new BasketPage(driver);
     }
 
-    @Test
-    @DisplayName("Тест: добавление пиццы в корзину")
+    @Test(description = "Тест: добавление пиццы в корзину")
     public void testAddPizzaToCart() {
         mainPage
                 .clickPizzaButton();
