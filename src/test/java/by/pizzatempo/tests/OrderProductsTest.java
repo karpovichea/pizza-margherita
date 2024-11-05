@@ -16,7 +16,7 @@ public class OrderProductsTest extends BaseTest {
     private BasketPage basketPage;
 
     @BeforeMethod
-    void setUpOderPizzaTests() {
+    public void setUpOderPizzaTests() {
         menuPage = new MenuPage(driver);
         pizzaPage = new PizzaPage(driver);
         orderPopUp = new OrderPopUp(driver);

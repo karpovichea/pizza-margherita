@@ -9,13 +9,13 @@ public class BaseTest {
     protected WebDriver driver;
 
     @BeforeMethod
-    void setUp() {
+    public void setUp() {
         driver = new ChromeDriver();
         driver.get("https://www.pizzatempo.by/");
     }
 
     @AfterMethod
-    void tearDown() {
+    public void tearDown() {
         driver.quit();
     }
 }
